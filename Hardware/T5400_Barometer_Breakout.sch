@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2169,20 +2169,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <vertex x="11.1379" y="0.9449"/>
 <vertex x="10.7163" y="0.9449"/>
 </polygon>
-</package>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="MICRO-FIDUCIAL">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
 </package>
 <package name="SFE_LOGO_FLAME_.1">
 <polygon width="0" layer="21">
@@ -7022,11 +7008,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="7.62" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
 <text x="0" y="0" size="1.9304" layer="94">SFE</text>
 </symbol>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
 <symbol name="SFE_LOGO_FLAME">
 <polygon width="0" layer="94">
 <vertex x="7.28" y="11.18"/>
@@ -7260,35 +7241,6 @@ This is the standard Spark Fun Electronics PCB logo.</description>
 </technologies>
 </device>
 <device name="SM" package="SFE-NEW-WEB-SOLDERMASK">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIAL" prefix="FID">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -8102,8 +8054,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="LOGO-SFE" device="NEW"/>
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="10k"/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
-<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
-<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".1_INCH"/>
 <part name="SJ2" library="SparkFun-Passives" deviceset="SOLDERJUMPER_2WAY" device="PASTE1&amp;2&amp;3"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -8137,8 +8087,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="LOGO1" gate="G$1" x="241.3" y="17.78"/>
 <instance part="R3" gate="G$1" x="99.06" y="99.06" rot="R90"/>
 <instance part="SUPPLY6" gate="1" x="99.06" y="121.92"/>
-<instance part="FID1" gate="G$1" x="243.84" y="27.94"/>
-<instance part="FID2" gate="G$1" x="243.84" y="33.02"/>
 <instance part="LOGO3" gate="G$1" x="132.08" y="20.32"/>
 <instance part="SJ2" gate="G$1" x="124.46" y="114.3" rot="R270"/>
 <instance part="SUPPLY2" gate="1" x="124.46" y="121.92"/>
