@@ -1,11 +1,24 @@
 T5400_Barometric_Breakout
 =========================
 
+The T5400 barometric pressure sensor is an incredibly small sensor.
+
+[![Part Name](URL for picture of part  )
+*Part Name (SKU)*](URL for product on Sparkfun.com)
+
 T5400 Barometric Breakout Board
 
 Repository Contents
 -------------------
+
+* **/Fritzing** - Fritzing Example wiring images
 * **/Hardware** - All Eagle design files (.brd, .sch)
+* **/Libraries** - All Arduino libraries and board examples
+* **/Production** - Test bed files and production panel files
+
+Product Versions
+----------------
+* [Part SKU](part URL)- Basic part and short description here
 
 License Information
 -------------------
