@@ -129,8 +129,8 @@
 <text x="10.922" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SDA/</text>
 <text x="13.97" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">MISO</text>
 <text x="16.002" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">!RST!/</text>
-<text x="19.05" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">EOC</text>
-<text x="21.59" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SEL</text>
+<text x="21.59" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">EOC</text>
+<text x="19.05" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SEL</text>
 <text x="3.81" y="12.7" size="0.889" layer="21" font="vector" ratio="15">T5400 Barometric Sensor</text>
 <text x="9.398" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SCLK</text>
 <text x="11.938" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">MOSI</text>
@@ -142,8 +142,8 @@
 <text x="10.922" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">SDA/</text>
 <text x="13.97" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">MISO</text>
 <text x="16.002" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">!RST!/</text>
-<text x="19.05" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">EOC</text>
-<text x="21.59" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">SEL</text>
+<text x="21.59" y="6.096" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">EOC</text>
+<text x="19.05" y="6.096" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">SEL</text>
 <text x="9.398" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">SCLK</text>
 <text x="11.938" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">MOSI</text>
 <text x="17.018" y="6.35" size="1.016" layer="22" font="vector" ratio="15" rot="SMR270" align="center-left">&amp;SS</text>

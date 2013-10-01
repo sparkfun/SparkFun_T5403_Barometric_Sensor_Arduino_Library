@@ -8127,9 +8127,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="R1" gate="G$1" x="134.62" y="106.68" rot="R90"/>
 <instance part="R2" gate="G$1" x="116.84" y="106.68" rot="R90"/>
 <instance part="SUPPLY1" gate="1" x="175.26" y="121.92"/>
-<instance part="C1" gate="G$1" x="190.5" y="99.06"/>
-<instance part="SUPPLY5" gate="1" x="190.5" y="121.92"/>
-<instance part="GND3" gate="1" x="190.5" y="78.74"/>
+<instance part="C1" gate="G$1" x="193.04" y="99.06"/>
+<instance part="SUPPLY5" gate="1" x="193.04" y="121.92"/>
+<instance part="GND3" gate="1" x="193.04" y="78.74"/>
 <instance part="SUPPLY4" gate="1" x="68.58" y="121.92"/>
 <instance part="GND2" gate="1" x="81.28" y="78.74"/>
 <instance part="STANDOFF1" gate="G$1" x="238.76" y="27.94"/>
@@ -8156,7 +8156,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="190.5" y1="81.28" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="81.28" x2="193.04" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
@@ -8168,8 +8168,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <net name="SEL" class="0">
 <segment>
 <pinref part="U1" gate="U$1" pin="SEL"/>
-<wire x1="172.72" y1="96.52" x2="175.26" y2="96.52" width="0.1524" layer="91"/>
-<label x="175.26" y="96.52" size="1.27" layer="95" xref="yes"/>
+<wire x1="172.72" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
+<label x="185.42" y="96.52" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="7"/>
@@ -8259,7 +8259,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="SUPPLY5" gate="1" pin="VCC"/>
-<wire x1="190.5" y1="121.92" x2="190.5" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="121.92" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="2"/>
