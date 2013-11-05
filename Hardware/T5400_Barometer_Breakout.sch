@@ -8114,7 +8114,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <sheet>
 <plain>
 <text x="167.64" y="7.62" size="5.08" layer="94" font="vector">Casey Kuhns</text>
-<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v01</text>
+<text x="238.76" y="7.62" size="2.54" layer="94" font="vector">v10</text>
 <text x="127" y="119.38" size="1.778" layer="97" rot="R180" align="bottom-right">NOTE: Remove solder jumper</text>
 <text x="134.62" y="116.84" size="1.778" layer="97" rot="MR180"> to disable I2C pullups</text>
 <rectangle x1="122.682" y1="113.792" x2="126.492" y2="114.808" layer="94"/>
