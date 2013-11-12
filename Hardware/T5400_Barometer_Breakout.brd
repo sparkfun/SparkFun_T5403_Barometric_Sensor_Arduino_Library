@@ -131,7 +131,7 @@
 <text x="16.002" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">!RST!/</text>
 <text x="21.59" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">EOC</text>
 <text x="19.05" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SEL</text>
-<text x="3.81" y="15.24" size="0.889" layer="21" font="vector" ratio="15">T5400 Barometric Sensor</text>
+<text x="3.81" y="15.24" size="0.889" layer="21" font="vector" ratio="15">T5403 Barometric Sensor</text>
 <text x="9.398" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">SCLK</text>
 <text x="11.938" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">MOSI</text>
 <text x="17.018" y="2.794" size="1.016" layer="21" font="vector" ratio="15" rot="R90" align="center-left">&amp;SS</text>
@@ -150,7 +150,7 @@
 <text x="26.67" y="-8.89" size="1.778" layer="25">Casey Kuhns</text>
 <rectangle x1="13.716" y1="8.89" x2="13.97" y2="9.652" layer="41"/>
 <rectangle x1="13.716" y1="9.652" x2="14.224" y2="10.414" layer="41"/>
-<text x="3.556" y="16.129" size="0.889" layer="22" font="vector" ratio="15" rot="MR180">T5400 Barometric Sensor</text>
+<text x="3.556" y="16.129" size="0.889" layer="22" font="vector" ratio="15" rot="MR180">T5403 Barometric Sensor</text>
 </plain>
 <libraries>
 <library name="T5400">
