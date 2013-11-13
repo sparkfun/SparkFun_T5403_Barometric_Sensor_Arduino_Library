@@ -1,12 +1,12 @@
-T5400_Barometric_Breakout
+T5403_Barometric_Breakout
 =========================
 
-The T5400 barometric pressure sensor is an incredibly small sensor.
+The T5403 barometric pressure sensor is an incredibly small sensor.
 
 [![Part Name](URL for picture of part  )
 *Part Name (SKU)*](URL for product on Sparkfun.com)
 
-T5400 Barometric Breakout Board
+T5403 Barometric Breakout Board
 
 Repository Contents
 -------------------
