@@ -1,40 +1,40 @@
 /*
-  t5400.cpp - Library for T5400 barometric pressure sensor.
+  t5403.cpp - Library for T5403 barometric pressure sensor.
   Created by Casey Kuhns.
   Released into the public domain.
 */
 
-#include "t5400.h"
+#include "t5403.h"
 #include "Wire.h"
 //#include "SPI.h"
 
-T5400::T5400(uint8_t interface){
+T5403::T5403(uint8_t interface){
 	_interface = interface; //set interface used for communication
 }
 
-void T5400::init(void){  
+void T5403::init(void){  
 
 	communicationBegin();
 
-	getData(T5400_C1, (int16_t*)&c1);  //Retrieve C1 from device, report success or failure
-	getData(T5400_C2, (int16_t*)&c2);  //Retrieve C2 from device, report success or failure
-	getData(T5400_C3, (int16_t*)&c3);  //Retrieve C3 from device, report success or failure
-	getData(T5400_C4, (int16_t*)&c4);  //Retrieve C4 from device, report success or failure
-	getData(T5400_C5, &c5);  //Retrieve C5 from device, report success or failure
-	getData(T5400_C6, &c6);  //Retrieve C6 from device, report success or failure
-	getData(T5400_C7, &c7);  //Retrieve C7 from device, report success or failure
-	getData(T5400_C8, &c8);  //Retrieve C8 from device, report success or failure
+	getData(T5403_C1, (int16_t*)&c1);  //Retrieve C1 from device, report success or failure
+	getData(T5403_C2, (int16_t*)&c2);  //Retrieve C2 from device, report success or failure
+	getData(T5403_C3, (int16_t*)&c3);  //Retrieve C3 from device, report success or failure
+	getData(T5403_C4, (int16_t*)&c4);  //Retrieve C4 from device, report success or failure
+	getData(T5403_C5, &c5);  //Retrieve C5 from device, report success or failure
+	getData(T5403_C6, &c6);  //Retrieve C6 from device, report success or failure
+	getData(T5403_C7, &c7);  //Retrieve C7 from device, report success or failure
+	getData(T5403_C8, &c8);  //Retrieve C8 from device, report success or failure
 }
 	
-int16_t T5400::getTemperature(uint8_t units){
+int16_t T5403::getTemperature(uint8_t units){
 	
 	int8_t status = 0; // Variable to store and report error codes
 	
 	int16_t temperature_raw; // create variable to contain raw temperature.
 	int32_t temperature_actual; // create variable to store calculated actual temperature
-	status =+ sendCommand(T5400_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
+	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
 	sensorWait(4500); //  Wait 4.5ms for conversion to complete
-	status =+ getData(T5400_DATA_REG, &temperature_raw);	//  Get raw temp value	
+	status =+ getData(T5403_DATA_REG, &temperature_raw);	//  Get raw temp value	
 	// Perform calculation specified in data sheet
 	temperature_actual = (((((int32_t) c1 * temperature_raw) >> 8) + ((int32_t) c2 << 6)) * 100) >> 16;
 	
@@ -47,7 +47,7 @@ int16_t T5400::getTemperature(uint8_t units){
 	}
 }
 
-int32_t T5400::getPressure(uint8_t precision){
+int32_t T5403::getPressure(uint8_t precision){
 	
 	int8_t status = 0; // Variable to store and report error codes
 	
@@ -56,12 +56,12 @@ int32_t T5400::getPressure(uint8_t precision){
 
 	uint8_t command; // variable to contain command data.
 
-	status =+ sendCommand(T5400_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
+	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
 	sensorWait(4500); //  Wait 4.5ms for conversion to complete
-	status =+ getData(T5400_DATA_REG, &temperature_raw);	//  Get raw temp value	
+	status =+ getData(T5403_DATA_REG, &temperature_raw);	//  Get raw temp value	
 	
 	command = (precision << 3)|(0x01); // Load measurement noise level into command along with start command bit.
-	status =+ sendCommand(T5400_COMMAND_REG, command); //  Start pressure measurement
+	status =+ sendCommand(T5403_COMMAND_REG, command); //  Start pressure measurement
 	
 	switch(precision){ //Select delay time based on noise level selected.
 		case MODE_LOW:
@@ -84,7 +84,7 @@ int32_t T5400::getPressure(uint8_t precision){
 		}
 	}		
 	
-	status =+ getData(T5400_DATA_REG, (int16_t*)&pressure_raw);	//  Get raw pressure value
+	status =+ getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	//  Get raw pressure value
 	
 	// Begin calculation of actual pressure using constants
 	
@@ -98,11 +98,11 @@ int32_t T5400::getPressure(uint8_t precision){
 	return pressure_actual;
 }
 
-void T5400::sensorWait(uint8_t time){
+void T5403::sensorWait(uint8_t time){
 	delay(time);
 };
 
-void T5400::communicationBegin(){
+void T5403::communicationBegin(){
 	if( _interface == SPI){  // If SPI is selected for communication use SPI commands
 	//	SPI.begin();
 	}
@@ -112,7 +112,7 @@ void T5400::communicationBegin(){
 
 }
 
-int8_t T5400::getData(uint8_t location, int16_t* output){
+int8_t T5403::getData(uint8_t location, int16_t* output){
 
 	uint8_t byteLow, byteHigh;
 	int16_t _output;
@@ -123,10 +123,10 @@ int8_t T5400::getData(uint8_t location, int16_t* output){
 	*/
 	}
 	else {  // If i2c is selected for communication use i2c commands
-		Wire.beginTransmission(T5400_I2C_ADDR); 
+		Wire.beginTransmission(T5403_I2C_ADDR); 
 		Wire.write(location);
 		Wire.endTransmission();    // stop transmitting
-		Wire.requestFrom(T5400_I2C_ADDR,2);
+		Wire.requestFrom(T5403_I2C_ADDR,2);
 
 		while(Wire.available()){
 			byteLow = Wire.read(); // receive low byte 
@@ -139,14 +139,14 @@ int8_t T5400::getData(uint8_t location, int16_t* output){
 	
 }
 
-int8_t T5400::sendCommand(uint8_t location, uint8_t command){
+int8_t T5403::sendCommand(uint8_t location, uint8_t command){
 	if(_interface == SPI){  // If SPI is selected for communication use SPI commands
 	/*	SPI.transfer(location);
 		SPI.transter(command);
 	*/
 	}
 	else{  // If i2c is selected for communication use i2c commands
-		Wire.beginTransmission(T5400_I2C_ADDR); 
+		Wire.beginTransmission(T5403_I2C_ADDR); 
 		Wire.write(location);
 		Wire.write(command);
 		Wire.endTransmission();    // stop transmitting
