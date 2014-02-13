@@ -1,29 +1,54 @@
-/*
-  t5403.cpp - Library for T5403 barometric pressure sensor.
-  Created by Casey Kuhns.
-  Released into the public domain.
-*/
+/******************************************************************************
+SFE_BMP180.cpp
+Library for T5403 barometric pressure sensor.
+Casey Kuhns, SparkFun Electronics
+2/12/2014
+https://github.com/sparkfun/T5403_Barometric_Breakout
+
+The T5403 by Epcos is a low cost I2C barometric pressure sensor.  This sensor 
+can be used in weather stations and for altitude estimations.  
+
+Resources:
+This library uses the Arduino Wire.h to complete I2C transactions.
+
+Development environment specifics:
+Arduino 1.0.5
+Board - v10
+
+NOTE:  SPI is currently unsupported in the hardware.  If a release comes with
+hardware support this file will be updated.  All reference to SPI is currently
+a place holder for future development.
+
+This code is beerware; if you see me (or any other SparkFun employee) at the
+local, and you've found our code helpful, please buy us a round!
+
+Distributed as-is; no warranty is given.
+******************************************************************************/
 
 #include "t5403.h"
 #include "Wire.h"
 //#include "SPI.h"
 
-T5403::T5403(uint8_t interface){
+T5403::T5403(uint8_t interface)
+// Base library type
+{
 	_interface = interface; //set interface used for communication
 }
 
-void T5403::init(void){  
+void T5403::begin(void)
+// Initialize library for subsequent pressure measurements
+{  
 
 	communicationBegin();
 
-	getData(T5403_C1, (int16_t*)&c1);  //Retrieve C1 from device, report success or failure
-	getData(T5403_C2, (int16_t*)&c2);  //Retrieve C2 from device, report success or failure
-	getData(T5403_C3, (int16_t*)&c3);  //Retrieve C3 from device, report success or failure
-	getData(T5403_C4, (int16_t*)&c4);  //Retrieve C4 from device, report success or failure
-	getData(T5403_C5, &c5);  //Retrieve C5 from device, report success or failure
-	getData(T5403_C6, &c6);  //Retrieve C6 from device, report success or failure
-	getData(T5403_C7, &c7);  //Retrieve C7 from device, report success or failure
-	getData(T5403_C8, &c8);  //Retrieve C8 from device, report success or failure
+	getData(T5403_C1, (int16_t*)&c1);  //Retrieve C1 from device
+	getData(T5403_C2, (int16_t*)&c2);  //Retrieve C2 from device
+	getData(T5403_C3, (int16_t*)&c3);  //Retrieve C3 from device
+	getData(T5403_C4, (int16_t*)&c4);  //Retrieve C4 from device
+	getData(T5403_C5, &c5);  //Retrieve C5 from device
+	getData(T5403_C6, &c6);  //Retrieve C6 from device
+	getData(T5403_C7, &c7);  //Retrieve C7 from device
+	getData(T5403_C8, &c8);  //Retrieve C8 from device
 }
 	
 int16_t T5403::getTemperature(uint8_t units){
@@ -82,7 +107,7 @@ int32_t T5403::getPressure(uint8_t precision){
 			sensorWait(67); //  Wait 67 ms for conversion to complete
 			break;
 		}
-	}		
+	};		
 	
 	status =+ getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	//  Get raw pressure value
 	
@@ -96,28 +121,36 @@ int32_t T5403::getPressure(uint8_t precision){
 	pressure_actual = (s * pressure_raw + o) >> 14;
 
 	return pressure_actual;
-}
+	
+	}
 
 void T5403::sensorWait(uint8_t time){
 	delay(time);
 };
 
-void T5403::communicationBegin(){
-	if( _interface == SPI){  // If SPI is selected for communication use SPI commands
+void T5403::communicationBegin()
+// Initialize the communication protocol used.  SPI is currently unsupported in 
+// the hardware.  If a release comes with hardware support this file will be 
+// updated.  All reference to SPI is currently a place holder for future 
+// development.
+{
+	if( _interface == SPI){  // If SPI is selected use SPI begin
 	//	SPI.begin();
 	}
-	else{  // If i2c is selected for communication use i2c commands
+	else{  // If i2c is selected for communication use i2c begin
 		Wire.begin();
 	}
 
 }
 
-int8_t T5403::getData(uint8_t location, int16_t* output){
+int8_t T5403::getData(uint8_t location, int16_t* output)
+// Communication transport function.  
+{
 
 	uint8_t byteLow, byteHigh;
 	int16_t _output;
 		
-	if( _interface == SPI){  // If SPI is selected for communication use SPI commands
+	if( _interface == SPI){  
 	/*	byteLow = SPI.transfer(0x00);
 		byteHigh = SPI.transter(0x00);
 	*/
@@ -125,12 +158,12 @@ int8_t T5403::getData(uint8_t location, int16_t* output){
 	else {  // If i2c is selected for communication use i2c commands
 		Wire.beginTransmission(T5403_I2C_ADDR); 
 		Wire.write(location);
-		Wire.endTransmission();    // stop transmitting
+		Wire.endTransmission();    // Transmit data
 		Wire.requestFrom(T5403_I2C_ADDR,2);
 
 		while(Wire.available()){
 			byteLow = Wire.read(); // receive low byte 
-			byteHigh = Wire.read(); // receive high byte and shift to proper location
+			byteHigh = Wire.read(); // receive high byte
 		}
 	}
 	
