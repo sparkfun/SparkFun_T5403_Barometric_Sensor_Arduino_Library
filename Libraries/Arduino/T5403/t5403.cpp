@@ -1,8 +1,8 @@
 /******************************************************************************
 SFE_BMP180.cpp
 Library for T5403 barometric pressure sensor.
-Casey Kuhns, SparkFun Electronics
-2/12/2014
+Casey Kuhns @ SparkFun Electronics
+Original Creation Date: February 12, 2014
 https://github.com/sparkfun/T5403_Barometric_Breakout
 
 The T5403 by Epcos is a low cost I2C barometric pressure sensor.  This sensor 
@@ -12,24 +12,25 @@ Resources:
 This library uses the Arduino Wire.h to complete I2C transactions.
 
 Development environment specifics:
-Arduino 1.0.5
-Board - v10
+	IDE: Arduino 1.0.5
+	Hardware Platform: Arduino Pro 3.3V/8MHz
+	T5403 Breakout Version: 1.0
 
 NOTE:  SPI is currently unsupported in the hardware.  If a release comes with
 hardware support this file will be updated.  All reference to SPI is currently
 a place holder for future development.
 
-This code is beerware; if you see me (or any other SparkFun employee) at the
-local, and you've found our code helpful, please buy us a round!
+This code is beerware. If you see me (or any other SparkFun employee) at the
+local pub, and you've found our code helpful, please buy us a round!
 
 Distributed as-is; no warranty is given.
 ******************************************************************************/
 
 #include "t5403.h"
-#include "Wire.h"
-//#include "SPI.h"
+#include <Wire.h> // Wire library is used for I2C
+//#include <SPI.h> // SPI library is used for...SPI.
 
-T5403::T5403(uint8_t interface)
+T5403::T5403(interface_mode interface)
 // Base library type
 {
 	_interface = interface; //set interface used for communication
@@ -38,7 +39,7 @@ T5403::T5403(uint8_t interface)
 void T5403::begin(void)
 // Initialize library for subsequent pressure measurements
 {  
-
+	// Set up the communication port
 	communicationBegin();
 
 	getData(T5403_C1, (int16_t*)&c1);  //Retrieve C1 from device
@@ -51,12 +52,12 @@ void T5403::begin(void)
 	getData(T5403_C8, &c8);  //Retrieve C8 from device
 }
 	
-int16_t T5403::getTemperature(uint8_t units){
+int16_t T5403::getTemperature(temperature_units units){
 	
 	int8_t status = 0; // Variable to store and report error codes
 	
-	int16_t temperature_raw; // create variable to contain raw temperature.
-	int32_t temperature_actual; // create variable to store calculated actual temperature
+	int16_t temperature_raw; // create variable for raw temperature.
+	int32_t temperature_actual; // create variable for calculated temperature
 	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
 	sensorWait(4500); //  Wait 4.5ms for conversion to complete
 	status =+ getData(T5403_DATA_REG, &temperature_raw);	//  Get raw temp value	
@@ -67,8 +68,11 @@ int16_t T5403::getTemperature(uint8_t units){
 		temperature_actual = ((temperature_actual * 9) / 5) + 3200;
 		return temperature_actual;
 		}
-	else{
+	else if(units == CELSIUS){ // If units desired is C return the C value
 		return (int16_t) temperature_actual;
+	}
+	else{
+		return -1; // If units unknown return an error of -1
 	}
 }
 
@@ -116,8 +120,12 @@ int32_t T5403::getPressure(uint8_t precision){
 	int32_t pressure_actual, s, o; //create variables to hold actual pressure and working variables for calculations.
 
 	// Calculations come from application note. 
-	s = (((((int32_t) c5 * temperature_raw)  >> 15) * temperature_raw) >> 19) + c3 + (((int32_t) c4 * temperature_raw) >> 17); 
-	o = (((((int32_t) c8 * temperature_raw) >> 15) * temperature_raw) >> 4) + (((int32_t) c7 * temperature_raw) >> 3) + ((int32_t)c6 * 0x4000); 
+	s = (((((int32_t) c5 * temperature_raw)  >> 15) * temperature_raw) >> 19)
+			+ c3 + (((int32_t) c4 * temperature_raw) >> 17); 
+			
+	o = (((((int32_t) c8 * temperature_raw) >> 15) * temperature_raw) >> 4) 
+			+ (((int32_t) c7 * temperature_raw) >> 3) + ((int32_t)c6 * 0x4000);
+			
 	pressure_actual = (s * pressure_raw + o) >> 14;
 
 	return pressure_actual;
@@ -146,7 +154,6 @@ void T5403::communicationBegin()
 int8_t T5403::getData(uint8_t location, int16_t* output)
 // Communication transport function.  
 {
-
 	uint8_t byteLow, byteHigh;
 	int16_t _output;
 		

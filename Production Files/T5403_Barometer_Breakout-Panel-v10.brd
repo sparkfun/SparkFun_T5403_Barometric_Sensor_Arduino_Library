@@ -1974,7 +1974,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="13.462" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="15.367" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="20.828" smashed="yes"/>
 <element name="STANDOFF2" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="20.828" smashed="yes"/>
@@ -1989,7 +1988,6 @@ design rules under a new name.</description>
 <element name="SJ2" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="16.764" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="15.494" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="16.6639" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="15.494" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R4" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="14.732" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="13.843" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2016,7 +2014,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="13.462" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="15.367" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF3" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="20.828" smashed="yes"/>
 <element name="STANDOFF4" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="20.828" smashed="yes"/>
@@ -2031,7 +2028,6 @@ design rules under a new name.</description>
 <element name="SJ1" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="16.764" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="15.494" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="16.6639" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="15.494" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R8" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="14.732" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="13.843" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2058,7 +2054,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="13.462" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="15.367" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF5" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="20.828" smashed="yes"/>
 <element name="STANDOFF6" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="20.828" smashed="yes"/>
@@ -2073,7 +2068,6 @@ design rules under a new name.</description>
 <element name="SJ3" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="16.764" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="15.494" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="16.6639" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="15.494" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R12" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="14.732" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="13.843" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2100,7 +2094,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="14.224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="13.462" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="15.367" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF7" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="20.828" smashed="yes"/>
 <element name="STANDOFF8" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="20.828" smashed="yes"/>
@@ -2115,7 +2108,6 @@ design rules under a new name.</description>
 <element name="SJ4" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="16.764" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="15.494" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="16.6639" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="15.494" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R16" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="14.732" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="13.843" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2142,7 +2134,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="30.48" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="32.385" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF9" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="37.846" smashed="yes"/>
 <element name="STANDOFF10" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="37.846" smashed="yes"/>
@@ -2157,7 +2148,6 @@ design rules under a new name.</description>
 <element name="SJ5" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="33.782" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="32.512" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="33.6819" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="32.512" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R20" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="31.75" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="30.861" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2184,7 +2174,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="30.48" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="32.385" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF11" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="37.846" smashed="yes"/>
 <element name="STANDOFF12" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="37.846" smashed="yes"/>
@@ -2199,7 +2188,6 @@ design rules under a new name.</description>
 <element name="SJ6" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="33.782" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="32.512" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="33.6819" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="32.512" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R24" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="31.75" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="30.861" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2226,7 +2214,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="30.48" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="32.385" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF13" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="37.846" smashed="yes"/>
 <element name="STANDOFF14" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="37.846" smashed="yes"/>
@@ -2241,7 +2228,6 @@ design rules under a new name.</description>
 <element name="SJ7" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="33.782" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="32.512" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="33.6819" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="32.512" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R28" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="31.75" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="30.861" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2268,7 +2254,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="31.242" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="30.48" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="32.385" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF15" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="37.846" smashed="yes"/>
 <element name="STANDOFF16" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="37.846" smashed="yes"/>
@@ -2283,7 +2268,6 @@ design rules under a new name.</description>
 <element name="SJ8" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="33.782" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="32.512" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="33.6819" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="32.512" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R32" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="31.75" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="30.861" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2310,7 +2294,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="47.498" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="49.403" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF17" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="54.864" smashed="yes"/>
 <element name="STANDOFF18" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="54.864" smashed="yes"/>
@@ -2325,7 +2308,6 @@ design rules under a new name.</description>
 <element name="SJ9" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="49.53" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="50.6999" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="49.53" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R36" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="48.768" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="47.879" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2352,7 +2334,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="47.498" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="49.403" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF19" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="54.864" smashed="yes"/>
 <element name="STANDOFF20" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="54.864" smashed="yes"/>
@@ -2367,7 +2348,6 @@ design rules under a new name.</description>
 <element name="SJ10" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="49.53" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="50.6999" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="49.53" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R40" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="48.768" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="47.879" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2394,7 +2374,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="47.498" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="49.403" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF21" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="54.864" smashed="yes"/>
 <element name="STANDOFF22" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="54.864" smashed="yes"/>
@@ -2409,7 +2388,6 @@ design rules under a new name.</description>
 <element name="SJ11" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="49.53" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="50.6999" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="49.53" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R44" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="48.768" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="47.879" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2436,7 +2414,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="48.26" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="47.498" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="49.403" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF23" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="54.864" smashed="yes"/>
 <element name="STANDOFF24" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="54.864" smashed="yes"/>
@@ -2451,7 +2428,6 @@ design rules under a new name.</description>
 <element name="SJ12" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="49.53" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="50.6999" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="49.53" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R48" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="48.768" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="47.879" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2478,7 +2454,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="64.516" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="66.421" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF25" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="71.882" smashed="yes"/>
 <element name="STANDOFF26" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="71.882" smashed="yes"/>
@@ -2493,7 +2468,6 @@ design rules under a new name.</description>
 <element name="SJ13" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="67.818" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="66.548" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="67.7179" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="66.548" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R52" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="65.786" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="64.897" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2520,7 +2494,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="64.516" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="66.421" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF27" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="71.882" smashed="yes"/>
 <element name="STANDOFF28" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="71.882" smashed="yes"/>
@@ -2535,7 +2508,6 @@ design rules under a new name.</description>
 <element name="SJ14" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="67.818" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="66.548" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="67.7179" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="66.548" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R56" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="65.786" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="64.897" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2562,7 +2534,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="64.516" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="66.421" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF29" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="71.882" smashed="yes"/>
 <element name="STANDOFF30" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="71.882" smashed="yes"/>
@@ -2577,7 +2548,6 @@ design rules under a new name.</description>
 <element name="SJ15" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="67.818" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="66.548" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="67.7179" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="66.548" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R60" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="65.786" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="64.897" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2604,7 +2574,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="65.278" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="64.516" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="66.421" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF31" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="71.882" smashed="yes"/>
 <element name="STANDOFF32" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="71.882" smashed="yes"/>
@@ -2619,7 +2588,6 @@ design rules under a new name.</description>
 <element name="SJ16" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="67.818" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="66.548" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="67.7179" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="66.548" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R64" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="65.786" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="64.897" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2646,7 +2614,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="81.534" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="83.439" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF33" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="88.9" smashed="yes"/>
 <element name="STANDOFF34" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="88.9" smashed="yes"/>
@@ -2661,7 +2628,6 @@ design rules under a new name.</description>
 <element name="SJ17" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="84.836" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="83.566" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="84.7359" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="83.566" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R68" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="82.804" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="81.915" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2688,7 +2654,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="81.534" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="83.439" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF35" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="88.9" smashed="yes"/>
 <element name="STANDOFF36" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="88.9" smashed="yes"/>
@@ -2703,7 +2668,6 @@ design rules under a new name.</description>
 <element name="SJ18" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="84.836" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="83.566" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="84.7359" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="83.566" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R72" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="82.804" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="81.915" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2730,7 +2694,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="81.534" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="83.439" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF37" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="88.9" smashed="yes"/>
 <element name="STANDOFF38" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="88.9" smashed="yes"/>
@@ -2745,7 +2708,6 @@ design rules under a new name.</description>
 <element name="SJ19" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="84.836" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="83.566" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="84.7359" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="83.566" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R76" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="82.804" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="81.915" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2772,7 +2734,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="82.296" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="81.534" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="83.439" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF39" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="88.9" smashed="yes"/>
 <element name="STANDOFF40" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="88.9" smashed="yes"/>
@@ -2787,7 +2748,6 @@ design rules under a new name.</description>
 <element name="SJ20" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="84.836" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="83.566" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="84.7359" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="83.566" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R80" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="82.804" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="81.915" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2814,7 +2774,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="20.828" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="20.828" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="21.717" y="98.552" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="21.844" y="100.457" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF41" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="9.398" y="105.918" smashed="yes"/>
 <element name="STANDOFF42" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="29.718" y="105.918" smashed="yes"/>
@@ -2829,7 +2788,6 @@ design rules under a new name.</description>
 <element name="SJ21" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="13.208" y="101.854" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.938" y="100.584" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.208" y="101.7539" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="15.113" y="100.584" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R84" library="SparkFun-Passives" package="0603-RES" value="10k" x="23.876" y="99.822" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.114" y="98.933" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2856,7 +2814,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="46.736" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="46.736" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="47.625" y="98.552" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="47.752" y="100.457" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF43" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="35.306" y="105.918" smashed="yes"/>
 <element name="STANDOFF44" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="55.626" y="105.918" smashed="yes"/>
@@ -2871,7 +2828,6 @@ design rules under a new name.</description>
 <element name="SJ22" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="39.116" y="101.854" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.846" y="100.584" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="39.116" y="101.7539" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="41.021" y="100.584" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R88" library="SparkFun-Passives" package="0603-RES" value="10k" x="49.784" y="99.822" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.022" y="98.933" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2898,7 +2854,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="72.644" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="72.644" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.533" y="98.552" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="73.66" y="100.457" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF45" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="61.214" y="105.918" smashed="yes"/>
 <element name="STANDOFF46" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="81.534" y="105.918" smashed="yes"/>
@@ -2913,7 +2868,6 @@ design rules under a new name.</description>
 <element name="SJ23" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="65.024" y="101.854" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.754" y="100.584" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="65.024" y="101.7539" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="66.929" y="100.584" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R92" library="SparkFun-Passives" package="0603-RES" value="10k" x="75.692" y="99.822" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.93" y="98.933" size="0.4064" layer="25" font="vector" rot="R90"/>
@@ -2940,7 +2894,6 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08604" x="98.552" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="98.552" y="99.314" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="99.441" y="98.552" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="99.568" y="100.457" size="0.4064" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="STANDOFF47" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="87.122" y="105.918" smashed="yes"/>
 <element name="STANDOFF48" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="107.442" y="105.918" smashed="yes"/>
@@ -2955,7 +2908,6 @@ design rules under a new name.</description>
 <element name="SJ24" library="SparkFun-Passives" package="SJ_3_PASTE1&amp;2&amp;3" value="" x="90.932" y="101.854" smashed="yes" rot="R90">
 <attribute name="NAME" x="89.662" y="100.584" size="0.4064" layer="25" rot="R90"/>
 <attribute name="VALUE" x="90.932" y="101.7539" size="0.02" layer="27" rot="R90"/>
-<attribute name="VALUE" x="92.837" y="100.584" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R96" library="SparkFun-Passives" package="0603-RES" value="10k" x="101.6" y="99.822" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.838" y="98.933" size="0.4064" layer="25" font="vector" rot="R90"/>
