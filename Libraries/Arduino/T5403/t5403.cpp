@@ -28,7 +28,7 @@ Distributed as-is; no warranty is given.
 
 #include "t5403.h"
 #include <Wire.h> // Wire library is used for I2C
-//#include <SPI.h> // SPI library is used for...SPI.
+//#include <SPI.h> // SPI library is used for SPI.
 
 T5403::T5403(interface_mode interface)
 // Base library type
@@ -52,47 +52,66 @@ void T5403::begin(void)
 	getData(T5403_C8, &c8);  //Retrieve C8 from device
 }
 	
-int16_t T5403::getTemperature(temperature_units units){
+int16_t T5403::getTemperature(temperature_units units)
+// Return a temperature reading.
+{
+	// Create variables for conversion and raw data. Create a status variable to 
+	// report if communication breaks.
+	int8_t status = 0; 
+	int16_t temperature_raw; 
+	int32_t temperature_actual; 
 	
-	int8_t status = 0; // Variable to store and report error codes
-	
-	int16_t temperature_raw; // create variable for raw temperature.
-	int32_t temperature_actual; // create variable for calculated temperature
-	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
-	sensorWait(4500); //  Wait 4.5ms for conversion to complete
-	status =+ getData(T5403_DATA_REG, &temperature_raw);	//  Get raw temp value	
+	// Start temperature measurement
+	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
+	// Wait 4.5ms for conversion to complete
+	sensorWait(4500); 
+	// Receive raw temp value from device.
+	status =+ getData(T5403_DATA_REG, &temperature_raw);		
 	// Perform calculation specified in data sheet
-	temperature_actual = (((((int32_t) c1 * temperature_raw) >> 8) + ((int32_t) c2 << 6)) * 100) >> 16;
+	temperature_actual = (((((int32_t) c1 * temperature_raw) >> 8) 
+						 + ((int32_t) c2 << 6)) * 100) >> 16;
+
+	// If status is greater than 1 return -1 as an error code. 
+	// this implies that the communication failed.
+	if(status >= 1){
+		return -1;
+	}
 	
+	// If Fahrenheit is selected return the temperature converted to F
 	if(units == FAHRENHEIT){
 		temperature_actual = ((temperature_actual * 9) / 5) + 3200;
 		return temperature_actual;
 		}
-	else if(units == CELSIUS){ // If units desired is C return the C value
+		
+	// If Celsius is selected return the temperature converted to C	
+	else if(units == CELSIUS){
 		return (int16_t) temperature_actual;
-	}
-	else{
-		return -1; // If units unknown return an error of -1
 	}
 }
 
-int32_t T5403::getPressure(uint8_t precision){
-	
-	int8_t status = 0; // Variable to store and report error codes
-	
-	int16_t temperature_raw; // create variable to contain raw temperature.
-	uint16_t pressure_raw; // create variable to contain raw pressure.
+int32_t T5403::getPressure(uint8_t commanded_precision)
+// Return a pressure reading.
+{
+	// Create variables for conversion and raw data. Create a status variable to 
+	// report if communication breaks.
+	int8_t status = 0; 
+	int16_t temperature_raw; 
+	uint16_t pressure_raw;
 
-	uint8_t command; // variable to contain command data.
-
-	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); //  Start temperature measurement
-	sensorWait(4500); //  Wait 4.5ms for conversion to complete
-	status =+ getData(T5403_DATA_REG, &temperature_raw);	//  Get raw temp value	
+	// Start temperature measurement
+	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
+	// Wait 4.5ms for conversion to complete
+	sensorWait(4500); 
+	// Receive raw temp value from device.
+	status =+ getData(T5403_DATA_REG, &temperature_raw);		
 	
-	command = (precision << 3)|(0x01); // Load measurement noise level into command along with start command bit.
-	status =+ sendCommand(T5403_COMMAND_REG, command); //  Start pressure measurement
+	// Load measurement noise level into command along with start command bit.
+	commanded_precision = (commanded_precision << 3)|(0x01); 
+	// Start pressure measurement
+	status =+ sendCommand(T5403_COMMAND_REG, commanded_precision); 
 	
-	switch(precision){ //Select delay time based on noise level selected.
+	//Select delay time based on precision level selected.
+	switch(commanded_precision){
 		case MODE_LOW:
 		{	
 			sensorWait(5); //  Wait 5ms for conversion to complete
@@ -111,13 +130,14 @@ int32_t T5403::getPressure(uint8_t precision){
 			sensorWait(67); //  Wait 67 ms for conversion to complete
 			break;
 		}
-	};		
+	};
 	
-	status =+ getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	//  Get raw pressure value
+	//  Receive raw pressure value from device.
+	status =+ getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	
 	
-	// Begin calculation of actual pressure using constants
-	
-	int32_t pressure_actual, s, o; //create variables to hold actual pressure and working variables for calculations.
+	// Create variables to hold calculated pressure and working variables for 
+	// calculations.
+	int32_t pressure_actual, s, o; 
 
 	// Calculations come from application note. 
 	s = (((((int32_t) c5 * temperature_raw)  >> 15) * temperature_raw) >> 19)
@@ -129,10 +149,11 @@ int32_t T5403::getPressure(uint8_t precision){
 	pressure_actual = (s * pressure_raw + o) >> 14;
 
 	return pressure_actual;
-	
-	}
+}
 
-void T5403::sensorWait(uint8_t time){
+void T5403::sensorWait(uint8_t time)
+// Delay function.  This can be modified to work outside of Arduino based MCU's
+{
 	delay(time);
 };
 
@@ -141,23 +162,29 @@ void T5403::communicationBegin()
 // the hardware.  If a release comes with hardware support this file will be 
 // updated.  All reference to SPI is currently a place holder for future 
 // development.
+// This can be modified to work outside of Arduino based MCU's
 {
-	if( _interface == SPI){  // If SPI is selected use SPI begin
+	// If SPI is selected use SPI begin
+	if( _interface == MODE_SPI){  
 	//	SPI.begin();
 	}
-	else{  // If i2c is selected for communication use i2c begin
+	// If i2c is selected for communication use i2c begin
+	else{
 		Wire.begin();
 	}
 
 }
 
 int8_t T5403::getData(uint8_t location, int16_t* output)
-// Communication transport function.  
+// Receive data from the device.  SPI is currently unsupported in the hardware.  
+// If a release comes with hardware support this function will be updated.  
+// All reference to SPI is currently a place holder for future development.
+// This can be modified to work outside of Arduino based MCU's  
 {
 	uint8_t byteLow, byteHigh;
 	int16_t _output;
 		
-	if( _interface == SPI){  
+	if( _interface == MODE_SPI){  
 	/*	byteLow = SPI.transfer(0x00);
 		byteHigh = SPI.transter(0x00);
 	*/
@@ -179,16 +206,22 @@ int8_t T5403::getData(uint8_t location, int16_t* output)
 	
 }
 
-int8_t T5403::sendCommand(uint8_t location, uint8_t command){
-	if(_interface == SPI){  // If SPI is selected for communication use SPI commands
-	/*	SPI.transfer(location);
-		SPI.transter(command);
-	*/
+int8_t T5403::sendCommand(uint8_t location, uint8_t command)
+// Send command to the device.  SPI is currently unsupported in the hardware.  
+// If a release comes with hardware support this function will be updated.  
+// All reference to SPI is currently a place holder for future development.
+// This can be modified to work outside of Arduino based MCU's
+{
+	// If SPI is selected for communication use SPI commands
+	if(_interface == MODE_SPI){
+	//	SPI.transfer(location);
+	//	SPI.transter(command);
 	}
-	else{  // If i2c is selected for communication use i2c commands
+	// If i2c is selected for communication use i2c commands
+	else{
 		Wire.beginTransmission(T5403_I2C_ADDR); 
 		Wire.write(location);
 		Wire.write(command);
-		Wire.endTransmission();    // stop transmitting
+		Wire.endTransmission();
 	}
 }

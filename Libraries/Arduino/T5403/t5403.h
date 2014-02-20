@@ -41,15 +41,15 @@ enum interface_mode
 	MODE_I2C,
 };
 
+// Define units for conversions. 
 enum temperature_units
 {
 	CELSIUS,
 	FAHRENHEIT,
 };
 
+// Device Address
 #define T5403_I2C_ADDR	0x77
-
-#define COMMAND_GET_TEMP	0x03
 	
 // Register addresses for operations
 #define T5403_COMMAND_REG	0xF1
@@ -65,23 +65,29 @@ enum temperature_units
 #define T5403_C7		0x9A
 #define T5403_C8		0x9C
 
-// definitions for pressure reading accuracy modes
+// definitions for pressure reading commands with accuracy modes
 #define MODE_LOW		0x00
 #define MODE_STANDARD	0x01
 #define MODE_HIGH		0x10
 #define MODE_ULTRA		0x11
 
+// definition for temperature reading command
+#define COMMAND_GET_TEMP	0x03
+
 class T5403
 {
 	public:
+		// Select the interface to be used in communication
 		T5403(interface_mode interface);
+		// Collect constants from sensor for calculations
 		void begin(void);
+		// Return calculated temperature from sensor
 		int16_t getTemperature(temperature_units units);
+		// Return calculated pressure from sensor
 		int32_t getPressure(uint8_t precision);
 
 	private:
 		// Variable used to store interface selected for communication.
-		// 
 		interface_mode _interface; 
 
 		// Constants filled in with T5403();
@@ -94,7 +100,7 @@ class T5403
 		void sensorWait(uint8_t time);
 		
 		// Communication transport functions. These can be modified to allow the 
-		// library to work with other platforms and archetectures.
+		// library to work with other platforms and architectures.
 		void communicationBegin();
 		int8_t getData(uint8_t location, int16_t* output);
 		int8_t sendCommand(uint8_t location, uint8_t command);
