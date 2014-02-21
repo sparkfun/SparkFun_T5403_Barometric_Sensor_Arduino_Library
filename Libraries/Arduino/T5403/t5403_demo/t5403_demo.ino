@@ -33,7 +33,7 @@ Distributed as-is; no warranty is given.
 T5403 barometer(MODE_I2C);
 //Create variables to store results
 float temperature_c, temperature_f;
-double pressure_abs, pressure_relative, delta_altitude;
+double pressure_abs, pressure_relative, altitude_delta, pressure_baseline;
 
 // Create Variable to store altitude in (m) for calculations;
 double base_altitude = 1655.0; // Altitude of SparkFun's HQ in Boulder, CO. in (m)
@@ -42,6 +42,8 @@ void setup() {
     Serial.begin(9600);
 	//Retrieve calibration constants for conversion math.
     barometer.begin();
+    // Grab a baseline pressure for delta altitude calculation.
+    pressure_baseline = barometer.getPressure(MODE_ULTRA);
 }
 
 void loop() {
@@ -66,9 +68,14 @@ void loop() {
   pressure_abs  = barometer.getPressure(MODE_ULTRA);
   
   // Let's do something interesting with our data.
-  sealevel(pressure_abs, base_altitude);
   
-
+  // Convert abs pressure with the help of altitude into relative pressure
+  // This is used in Weather stations.
+  pressure_relative = sealevel(pressure_abs, base_altitude);
+  
+  // Taking our baseline pressure at the beginning we can find an approximate
+  // change in altitude based on the differences in pressure.   
+  altitude_delta = altitude(pressure_abs , pressure_baseline);
   
   // Report values via UART
   Serial.print("Temperature C = ");
@@ -77,8 +84,14 @@ void loop() {
   Serial.print("Temperature F = ");
   Serial.println(temperature_f / 100);  
 
-  Serial.print("Pressure abs = ");
+  Serial.print("Pressure abs (Pa)= ");
   Serial.println(pressure_abs);  
+  
+  Serial.print("Pressure relative (hPa)= ");
+  Serial.println(pressure_relative); 
+  
+  Serial.print("Altitude change (m) = ");
+  Serial.println(altitude_delta); 
   
   delay(1000);
 }
@@ -91,7 +104,7 @@ void loop() {
 // return the equivalent pressure (mb) at sea level.
 // This produces pressure readings that can be used for weather measurements.
 {
-	return(P/pow(1-(A/44330.0),5.255));
+	return((P/100)/pow(1-(A/44330.0),5.255));
 }
 
 
