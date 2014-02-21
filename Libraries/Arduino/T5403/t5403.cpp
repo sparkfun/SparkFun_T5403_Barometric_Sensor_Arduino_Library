@@ -55,28 +55,21 @@ void T5403::begin(void)
 int16_t T5403::getTemperature(temperature_units units)
 // Return a temperature reading.
 {
-	// Create variables for conversion and raw data. Create a status variable to 
-	// report if communication breaks.
-	int8_t status = 0; 
+	// Create variables for conversion and raw data. 
 	int16_t temperature_raw; 
 	int32_t temperature_actual; 
 	
 	// Start temperature measurement
-	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
+	sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
 	// Wait 4.5ms for conversion to complete
 	sensorWait(4500); 
 	// Receive raw temp value from device.
-	status =+ getData(T5403_DATA_REG, &temperature_raw);		
+	getData(T5403_DATA_REG, &temperature_raw);		
 	// Perform calculation specified in data sheet
 	temperature_actual = (((((int32_t) c1 * temperature_raw) >> 8) 
 						 + ((int32_t) c2 << 6)) * 100) >> 16;
 
-	// If status is greater than 1 return -1 as an error code. 
-	// this implies that the communication failed.
-	if(status >= 1){
-		return -1;
-	}
-	
+
 	// If Fahrenheit is selected return the temperature converted to F
 	if(units == FAHRENHEIT){
 		temperature_actual = ((temperature_actual * 9) / 5) + 3200;
@@ -92,23 +85,21 @@ int16_t T5403::getTemperature(temperature_units units)
 int32_t T5403::getPressure(uint8_t commanded_precision)
 // Return a pressure reading.
 {
-	// Create variables for conversion and raw data. Create a status variable to 
-	// report if communication breaks.
-	int8_t status = 0; 
+	// Create variables for conversion and raw data. 
 	int16_t temperature_raw; 
 	uint16_t pressure_raw;
 
 	// Start temperature measurement
-	status =+ sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
+	sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
 	// Wait 4.5ms for conversion to complete
 	sensorWait(4500); 
 	// Receive raw temp value from device.
-	status =+ getData(T5403_DATA_REG, &temperature_raw);		
+	getData(T5403_DATA_REG, &temperature_raw);		
 	
 	// Load measurement noise level into command along with start command bit.
 	commanded_precision = (commanded_precision << 3)|(0x01); 
 	// Start pressure measurement
-	status =+ sendCommand(T5403_COMMAND_REG, commanded_precision); 
+	sendCommand(T5403_COMMAND_REG, commanded_precision); 
 	
 	//Select delay time based on precision level selected.
 	switch(commanded_precision){
@@ -133,7 +124,7 @@ int32_t T5403::getPressure(uint8_t commanded_precision)
 	};
 	
 	//  Receive raw pressure value from device.
-	status =+ getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	
+	getData(T5403_DATA_REG, (int16_t*)&pressure_raw);	
 	
 	// Create variables to hold calculated pressure and working variables for 
 	// calculations.
