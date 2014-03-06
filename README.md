@@ -1,12 +1,13 @@
 T5403_Barometric_Breakout
 =========================
 
-The T5403 barometric pressure sensor is an incredibly small sensor.
+Breakout board and example code for the Epcos T5403 barometric pressure sensor.
 
-[![Part Name](URL for picture of part  )
-*Part Name (SKU)*](URL for product on Sparkfun.com)
+[![alt text](https://cdn.sparkfun.com/assets/parts/8/6/0/0/12039-01.jpg)](https://cdn.sparkfun.com/assets/parts/8/6/0/0/12039-01.jpg)
 
-T5403 Barometric Breakout Board
+Product page: [www.sparkfun.com/products/12039](https://www.sparkfun.com/products/12039)
+
+Hookup Guide: [learn.sparkfun.com/tutorials/t5403-barometric-pressure-sensor-hookup](https://learn.sparkfun.com/tutorials/t5403-barometric-pressure-sensor-hookup)
 
 Repository Contents
 -------------------
@@ -19,6 +20,11 @@ Repository Contents
 Product Versions
 ----------------
 * [Part SKU](part URL)- Basic part and short description here
+
+Authors
+-------
+
+ * Casey Kuhns, SparkFun Electronics
 
 License Information
 -------------------
