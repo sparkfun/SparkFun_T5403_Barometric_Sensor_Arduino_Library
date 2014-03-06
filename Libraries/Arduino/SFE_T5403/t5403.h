@@ -1,5 +1,5 @@
 /******************************************************************************
-SFE_BMP180.h
+t5403.h
 Library for T5403 barometric pressure sensor.
 Casey Kuhns @ SparkFun Electronics
 2/12/2014

@@ -1,5 +1,5 @@
 /******************************************************************************
-SFE_BMP180.cpp
+t5403.cpp
 Library for T5403 barometric pressure sensor.
 Casey Kuhns @ SparkFun Electronics
 Original Creation Date: February 12, 2014
@@ -61,8 +61,8 @@ int16_t T5403::getTemperature(temperature_units units)
 	
 	// Start temperature measurement
 	sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
-	// Wait 4.5ms for conversion to complete
-	sensorWait(4500); 
+	// Wait 5ms for conversion to complete
+	sensorWait(5); 
 	// Receive raw temp value from device.
 	getData(T5403_DATA_REG, &temperature_raw);		
 	// Perform calculation specified in data sheet
@@ -91,8 +91,8 @@ int32_t T5403::getPressure(uint8_t commanded_precision)
 
 	// Start temperature measurement
 	sendCommand(T5403_COMMAND_REG, COMMAND_GET_TEMP); 
-	// Wait 4.5ms for conversion to complete
-	sensorWait(4500); 
+	// Wait 5ms for conversion to complete
+	sensorWait(5); 
 	// Receive raw temp value from device.
 	getData(T5403_DATA_REG, &temperature_raw);		
 	
