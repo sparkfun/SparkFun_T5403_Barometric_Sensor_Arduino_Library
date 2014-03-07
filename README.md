@@ -19,7 +19,7 @@ Repository Contents
 
 Product Versions
 ----------------
-* [Part SKU](part URL)- Basic part and short description here
+* [SEN-12039](https://www.sparkfun.com/products/12039) - T5403 Barometric Sensor Breakout
 
 Authors
 -------
