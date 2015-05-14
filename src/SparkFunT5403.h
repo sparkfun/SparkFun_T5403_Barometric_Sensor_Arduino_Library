@@ -1,5 +1,5 @@
 /******************************************************************************
-t5403.h
+SparkFunT5403.h
 Library for T5403 barometric pressure sensor.
 Casey Kuhns @ SparkFun Electronics
 2/12/2014
@@ -17,6 +17,8 @@ Development environment specifics:
 	Hardware Platform: Arduino Pro 3.3V/8MHz
 	T5403 Breakout Version: 1.0
 
+	**Updated to Arduino 1.6.4 5/2015**
+	
 NOTE:  SPI is currently unsupported in the hardware.  If a release comes with
 hardware support this file will be updated.  All reference to SPI is currently
 a place holder for future development.
@@ -27,8 +29,8 @@ local pub, and you've found our code helpful, please buy us a round!
 Distributed as-is; no warranty is given.
 ******************************************************************************/
 
-#ifndef t5403_h
-#define t5403_h
+#ifndef SparkFunT5403_h
+#define SparkFunT5403_h
 
 #include "Arduino.h"
 
