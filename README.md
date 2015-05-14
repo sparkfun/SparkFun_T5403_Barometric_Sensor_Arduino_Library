@@ -1,5 +1,5 @@
 Sparkfun T5403 Barometric Sensor Breakout Arduino Library
-=========================
+=======================================================
 
 ![T5403 Barometric Pressure Sensor](https://cdn.sparkfun.com/assets/parts/8/6/0/0/12039-01.jpg)
 
@@ -11,7 +11,6 @@ Repository Contents
 -------------------
 
 * **/examples** - Example sketches for the library (.ino). Run these from the Arduino IDE. 
-* **/extras** - Additional documentation for the user. These files are ignored by the IDE. 
 * **/src** - Source files for the library (.cpp, .h).
 * **keywords.txt** - Keywords from this library that will be highlighted in the Arduino IDE. 
 * **library.properties** - General library properties for the Arduino package manager. 
@@ -28,8 +27,8 @@ Products that use this Library
 
 Version History
 ----------------
-
-* [1.0]() - Initial Release
+* [1.0.1](https://github.com/sparkfun/SparkFun_T5403_Barometric_Sensor_Arduino_Library/tree/V_1.0.1) - Small clean-up, edits.
+* [1.0](https://github.com/sparkfun/SparkFun_T5403_Barometric_Sensor_Arduino_Library/tree/V_1.0) - Initial Release
 
 License Information
 -------------------

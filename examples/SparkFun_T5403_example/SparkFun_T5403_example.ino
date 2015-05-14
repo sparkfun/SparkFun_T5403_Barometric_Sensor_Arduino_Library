@@ -16,6 +16,8 @@ Development environment specifics:
 	IDE: Arduino 1.0.5
 	Hardware Platform: Arduino Pro 3.3V/8MHz
 	T5403 Breakout Version: 1.0
+	
+	**Updated to Arduino 1.6.4 5/2015**
 
 NOTE:  SPI is currently unsupported in the hardware.  If a release comes with
 hardware support this file will be updated.  All reference to SPI is currently
@@ -28,7 +30,7 @@ Distributed as-is; no warranty is given.
 ******************************************************************************/
 
 #include <Wire.h>
-#include <t5403.h>
+#include <SparkFunT5403.h>
 
 T5403 barometer(MODE_I2C);
 //Create variables to store results
