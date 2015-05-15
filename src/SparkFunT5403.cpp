@@ -98,10 +98,8 @@ int32_t T5403::getPressure(uint8_t commanded_precision)
 	// Receive raw temp value from device.
 	getData(T5403_DATA_REG, &temperature_raw);		
 	
-	// Load measurement noise level into command along with start command bit.
-	commanded_precision = (commanded_precision << 3)|(0x01); 
-	// Start pressure measurement
-	sendCommand(T5403_COMMAND_REG, commanded_precision); 
+	// Load measurement noise level into command along with start command bit and start pressure measurement
+	sendCommand(T5403_COMMAND_REG, (commanded_precision << 3)|(0x01)); 
 	
 	//Select delay time based on precision level selected.
 	switch(commanded_precision){
